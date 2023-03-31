@@ -2,7 +2,7 @@
 Author: zhangL
 Date: 2023-03-29 16:34:57
 LastEditors: zhangL
-LastEditTime: 2023-03-31 16:14:39
+LastEditTime: 2023-03-31 16:48:26
 FilePath: /Hope/programm/Ant_Colony/Ant_self.py
 '''
 import numpy as np
@@ -126,7 +126,8 @@ class AntColony:
             print("iteration:{}, best:{}".format(iter, shortest_distance))
             if best_ant_distance < shortest_distance:
                 shortest_distance = best_ant_distance
-        return shortest_distance
+            best_path = all_paths[min_index]
+        return best_path
     
 
 
